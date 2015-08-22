@@ -8,7 +8,7 @@
     "dev:server": "parallelshell \"webpack -w\" \"nodemon server/babel-wrapper.js\"",
     "prod:server": "webpack && node server/babel-wrapper.js",
     "build": "babel -o client/index.js client/index.babel.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Nice, no test specified!\" && exit 0"
   },
   "author": "",
   "license": "ISC",
