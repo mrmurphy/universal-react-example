@@ -1,5 +1,5 @@
 deployment:
   production:
-    branch: master
+    branch: demo-both
     commands:
       - ./bin/deploy.sh
