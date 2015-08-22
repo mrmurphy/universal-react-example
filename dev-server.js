@@ -10,9 +10,6 @@ new WebpackDevServer(webpack(config), {
   stats: {
     colors: true,
     chunks: false
-  },
-  proxy: {
-    '/api/*': 'http://localhost:4040'
   }
 }).listen(4030, 'localhost', function (err) {
   if (err) {

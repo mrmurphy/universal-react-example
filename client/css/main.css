@@ -3,3 +3,38 @@
 h1, h2, h3, h4, p, body, a {
   font-family: "Open Sans"
 }
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #484d51;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateX(20vw);
+  transition: 400ms;
+}
+
+.page-enter.page-enter-active {
+  opacity: 1;
+  transform: translateX(0vw);
+}
+
+.page-leave {
+  opacity: 1;
+  transition: 400ms;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  transform: translateX(0vw);
+}
+
+.page-leave-active {
+  opacity: 0;
+  transform: translateX(-20vw);
+}
