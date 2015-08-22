@@ -49,7 +49,8 @@ Also included is the outline for the talk.
   - Query the HTML with cURL or Postman
   - Rewrite app in the following steps:
     - Showcase Helmet
-    - Render React to a string and sub it in the template
+    - Render React to a string
+    - Turn index.html into a template so that the head attributes and the body can be inserted
     - React Router:
       - Use the History location instead of the hash location on the client
       - Add routes on the server that lead to the universal rendering function so that the current path can be passed to React Router
@@ -58,9 +59,12 @@ Also included is the outline for the talk.
   - Share a link on Facebook
   - Excite!
 
-## Gotchas
+## Gotchas & Tips
 
   - Use <Link> instead of <a> with HistoryLocation and react-router to keep the whole page from re-rendering.
+  - Use babel on the server so that files with jsx can be imported.
+  - Unless you want to run Webpack before requiring your client code on the server, don't `reqire` or `import` files that aren't parseable by Babel.
+  - Define all routes in a separate module from your the react render function.
 
 ## Things we didn't talk about
 
